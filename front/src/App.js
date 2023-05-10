@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Products from "./components/Products";
 import Details from "./components/Details";
 import Cart from "./components/Cart";
+import NotFound from "./components/NotFound";
 import Footer from "./components/Footer";
 import "./App.css";
 
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/products" element={<Products />} />
         <Route path="/product/:id" element={<Details/>} />
         <Route path="/cart" element={<Cart/>} />
+        <Route path="*" element={<NotFound />} />
     </Routes>
     <Footer />
 </BrowserRouter>
