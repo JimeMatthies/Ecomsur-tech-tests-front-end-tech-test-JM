@@ -6,6 +6,7 @@ import Products from "./components/Products";
 import Details from "./components/Details";
 import Cart from "./components/Cart";
 import Footer from "./components/Footer";
+import "./App.css";
 
 const App = () => {
 
