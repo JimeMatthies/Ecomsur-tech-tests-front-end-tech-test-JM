@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Products from "./components/Products";
 import Details from "./components/Details";
+import Cart from "./components/Cart";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/product/:id" element={<Details/>} />
+        <Route path="/cart" element={<Cart/>} />
     </Routes>
     <Footer />
 </BrowserRouter>
