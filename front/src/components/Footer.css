@@ -1,0 +1,12 @@
+.os__footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(50, 50, 50);
+    color: white;
+    text-align: center;
+    font-family: 'Roboto';
+    padding: 1rem;
+    z-index: 2;
+}

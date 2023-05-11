@@ -1,0 +1,41 @@
+.os__navbar {
+    background-color: black;
+    position: fixed;
+    width: 94%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+    z-index: 2;
+}
+
+.os__navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+.os__navbar-home {
+    font-size: 1.5rem;
+}
+
+.os__navbar-cart{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    margin-right: 4rem;
+}
+
+.os__navbar-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 700;
+    color: black;
+    margin-left: 5px;
+}

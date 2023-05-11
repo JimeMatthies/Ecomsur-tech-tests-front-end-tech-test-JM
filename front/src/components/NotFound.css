@@ -1,0 +1,12 @@
+.os__notfound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(50, 50, 50);
+    min-height: 80vh;
+}
+
+.os__notfound h2 {
+    font-size: 4rem;
+}

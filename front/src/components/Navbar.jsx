@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { BsCart4 } from 'react-icons/bs';
+import "./Navbar.css";
 
 const Navbar = () => {
     return (
