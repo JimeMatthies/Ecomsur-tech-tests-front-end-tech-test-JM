@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import Details from "./components/Details";
+import Detail from "./components/Detail";
 import Cart from "./components/Cart";
 import NotFound from "./components/NotFound";
 import Footer from "./components/Footer";
@@ -15,7 +15,7 @@ const App = () => {
     <Navbar/>
     <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/product/:id" element={<Details/>} />
+        <Route path="/detail/:id" element={<Detail/>} />
         <Route path="/cart" element={<Cart/>} />
         <Route path="*" element={<NotFound />} />
     </Routes>

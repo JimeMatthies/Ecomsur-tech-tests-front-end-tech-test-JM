@@ -1,7 +1,5 @@
 .os__navbar {
     background-color: black;
-    position: fixed;
-    width: 94%;
     height: 4rem;
     display: flex;
     justify-content: space-between;
@@ -19,14 +17,14 @@
     font-size: 1.5rem;
 }
 
-.os__navbar-cart{
+.os__navbar-cart-container{
     display: flex;
     align-items: center;
     font-size: 2rem;
     margin-right: 4rem;
 }
 
-.os__navbar-quantity {
+.os__navbar-cart-quantity {
     display: flex;
     align-items: center;
     justify-content: center;

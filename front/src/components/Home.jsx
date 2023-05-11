@@ -1,37 +1,35 @@
-import React from "react";
-import { useGetAllproductsQuery } from "../features/productsApi";
+import React, { Fragment, useEffect } from 'react';
+import { useDispatch, useSelector } from "react-redux";
+import Card from "./Card"
+import { getProducts } from '../actions';
 import "./Home.css";
 
 const Home = () => {
-    const { data, error, isLoading } = useGetAllproductsQuery()
+    const dispatch = useDispatch();
+    const products = useSelector(state => state.products);
+
+    useEffect(() => {
+        dispatch(getProducts());
+    }, [dispatch]);
+
     return (
         <div className="os__home">
-            {isLoading ? (
-                <p>Loading...</p>
-            ) : error ? (
-                <p>An error occured...</p>
-            ) : (
-                <>
-                    <h2>New Arrivals</h2>
-                    <div className="os__home-products">
-                        {data?.map(product => <div key={product.id} className="os__home-product">
-                            <div className="os__home-product-header">
-                                <h3>{product.brand}</h3>
-                                <h3>{product.name}</h3>
-                            </div>
-                            <div className="os__home-product-image">
-                                <img src={`http://localhost:5000${product.image}`} alt={product.name}/>
-                            </div>
-                            <div className="os__home-product-details">
-                                <p>Price: ${product.price}</p>
-                                <p>Rating: {product.rating}</p>
-                                <p>Reviews: {product.numReviews}</p>
-                                <button>Add to Cart</button>
-                            </div>
-                        </div> )}
-                    </div>
-                </>
-            )}
+            <div className="os__home-container">
+                {products.map((product) => (
+                    <Fragment key={product._id}>
+                        <Card
+                            id={product._id}
+                            stock={product.countInStock}
+                            product={product}
+                            brand={product.brand}
+                            name={product.name}
+                            image={product.image}
+                            price={`Price: ${product.price}`}
+                            rating={`Rating: ${product.rating}`}
+                            numReviews={`Reviews: ${product.numReviews}`} />
+                    </Fragment>
+                ))}
+            </div>
         </div>
     );
 }
